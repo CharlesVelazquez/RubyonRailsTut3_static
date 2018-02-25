@@ -54,8 +54,8 @@
 
 # # Allow puma to be restarted by `rails restart` command.
 # plugin :tmp_restart
-#Heroku code for puma below:
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+#Heroku code for puma below: Note*:Can't run native on windows, used unless code to compensate
+workers Integer(ENV['WEB_CONCURRENCY'] || 2) unless Gem.win_platform?
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
