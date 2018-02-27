@@ -1,23 +1,22 @@
-# Ruby on Rails Tutorial sample application
+# Code V Blog
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
+I made this blogging website after reading through the
+[*Ruby on Rails Tutorial:Learn Web Development with Rails*](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
 ## License
 
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
+Please read the License.md for more information
 
 ## Getting started
 
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, download the repo and then install the needed gems:
 
 ```
 $ bundle install --without production
 ```
+(*Note: Windows users be careful of bcrypt, you may have to install
+ruby specific bcrypt to get it to work*)
 
 Next, migrate the database:
 
@@ -25,17 +24,8 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
+Lastly, run the app in a local server:
 
 ```
 $ rails server
 ```
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
