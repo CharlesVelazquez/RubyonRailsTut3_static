@@ -11,8 +11,6 @@ gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 #bootstrap
 gem 'bootstrap-sass'
-#Run gem install bcrypt --platform=ruby on windows
-gem 'bcrypt'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -29,6 +27,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -49,10 +50,13 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'bcrypt'
 end
 
 group :production do
   gem 'pg', '0.18.4'
+  #Run gem install bcrypt --platform=ruby on windows
+  gem 'bcrypt'#You need this in development unless using windows, manually run above code in comments instead.
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

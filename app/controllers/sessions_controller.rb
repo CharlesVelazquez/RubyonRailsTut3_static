@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       log_in user
       #if statement for the ckeckbox, remembers them
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else#Needed to use flash.now to prevent message from persisting after render
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
