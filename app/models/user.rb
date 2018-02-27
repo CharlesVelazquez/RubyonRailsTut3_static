@@ -36,7 +36,7 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
-end
+
 
 # Activates an account.
   def activate
@@ -60,3 +60,5 @@ private
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
+
+end
