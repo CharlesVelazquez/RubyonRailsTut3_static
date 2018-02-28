@@ -1,0 +1,5 @@
+Hi <%= @user.name %>,
+
+Welcome to the VBlog! Click on the link below to activate your account (*Thanks for joining*):
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
