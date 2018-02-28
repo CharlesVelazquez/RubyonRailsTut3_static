@@ -1,5 +1,12 @@
 class User < ApplicationRecord
+<<<<<<< HEAD
 	attr_accessor :remember_token, :activation_token, :reset_token
+=======
+  has_many :microposts, dependent: :destroy
+	attr_accessor :remember_token
+	before_save { self.email = email.downcase }
+	attr_accessor :remember_token, :activation_token
+>>>>>>> c2517b619e820f98a523d988c2597af97bc6ba91
   before_save   :downcase_email
   before_create :create_activation_digest
 	validates :name, presence: true, length: { maximum: 50 }
@@ -37,6 +44,13 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
+<<<<<<< HEAD
+=======
+  # Defines a proto-feed.
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+>>>>>>> c2517b619e820f98a523d988c2597af97bc6ba91
 
 # Activates an account.
   def activate
@@ -75,5 +89,8 @@ private
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
+<<<<<<< HEAD
 
+=======
+>>>>>>> c2517b619e820f98a523d988c2597af97bc6ba91
 end
