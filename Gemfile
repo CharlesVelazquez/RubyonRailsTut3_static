@@ -30,6 +30,10 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'carrierwave'
+gem 'mini_magick'
+   #Run gem install bcrypt --platform=ruby on windows then bundle install --without development production
+  gem 'bcrypt'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -50,13 +54,11 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'bcrypt'
 end
 
 group :production do
   gem 'pg', '0.18.4'
-  #Run gem install bcrypt --platform=ruby on windows
-  gem 'bcrypt'#You need this in development unless using windows, manually run above code in comments instead.
+  gem 'fog'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
