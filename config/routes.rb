@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
   get 'password_resets/new'
-
   get 'password_resets/edit'
-
-	resources :users
-  resources :account_activations, only: [:edit]
-	resources :password_resets, only: [:new, :create, :edit, :update]
-
 	get '/signup', to: 'users#new'
 	get '/contact', to:'static_pages#contact'
   get '/home', to: 'static_pages#home'
@@ -20,14 +14,10 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   root 'static_pages#home'
-<<<<<<< HEAD
-=======
 
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
->>>>>>> c2517b619e820f98a523d988c2597af97bc6ba91
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
