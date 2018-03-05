@@ -1,15 +1,13 @@
-# Ruby on Rails Tutorial sample application
+# Code V Blog
 
-This is the sample application for
+This is a simple blog website I made by following the Rails tutorial:
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
 ## License
 
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
+Please read the licence.md file for info
 
 ## Getting started
 
@@ -25,17 +23,9 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
+Lastly, run the server and everything should be good
+(*Note: Windows users may have issues with bundle installing bcrypt*)
 
 ```
 $ rails server
 ```
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
