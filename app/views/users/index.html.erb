@@ -1,0 +1,10 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<ul class="users"><!-- Rails can automatically run through an object with a lot of users -->
+   <%= render @users %>
+</ul>
+
+<%= will_paginate %>

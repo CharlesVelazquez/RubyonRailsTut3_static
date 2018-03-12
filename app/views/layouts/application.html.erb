@@ -9,9 +9,13 @@
   	<%= render 'layouts/header' %>
   	<h3>Layout being rendered X 2</h3>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+      <!-- The alert-<%=%>) actually sets the class name to whatever the name of the error is which is cool-->
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
     	<%= yield %>
     </div>
     <%= render 'layouts/footer' %>
-
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
